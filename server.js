@@ -3,7 +3,7 @@ const express = require("express");
 
 //Create server
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000
 
 //Read html, json and use public folder
 app.use(express.urlencoded({extended: true}));
@@ -15,5 +15,5 @@ require("./routes/view")(app);
 
 //Listener
 app.listen(PORT, () => {
-    console.log("App listening on PORT" + PORT);
+    console.log(`App listening on PORT" + ${PORT}`);
 });
